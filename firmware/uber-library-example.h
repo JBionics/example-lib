@@ -11,9 +11,7 @@
 
 // TEMPORARY UNTIL the stuff that supports the code above is deployed to the build IDE
 #include "application.h"
-namespace UberLibraryExample
-{
-  class Pin
+  class JBPin
   {
     private:
       int number;
@@ -31,6 +29,5 @@ namespace UberLibraryExample
       void setLow();
       void setActualPinState();
   };
-}
 
 #endif

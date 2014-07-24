@@ -2,21 +2,21 @@
 #include "uber-library-example.h"
 
 // Constructor
-UberLibraryExample::Pin::Pin(int _number)
+JBPin::JBPin(int _number)
 {
   number = _number;
   state = LOW;
 }
 
 // Initializers that should be called in the `setup()` function
-void UberLibraryExample::Pin::beginInPinMode(PinMode _pinMode)
+void JBPin::beginInPinMode(PinMode _pinMode)
 {
   pinMode(number, _pinMode); 
 }
 
 // Main API functions that the library provides
 // typically called in `loop()` or `setup()` functions
-void UberLibraryExample::Pin::modulateAtFrequency(int _ms)
+void JBPin::modulateAtFrequency(int _ms)
 {
   setHigh();
   delay(_ms);
@@ -25,35 +25,35 @@ void UberLibraryExample::Pin::modulateAtFrequency(int _ms)
 }
 
 // Getters
-int UberLibraryExample::Pin::getNumber()
+int JBPin::getNumber()
 {
   return number;
 }
-bool UberLibraryExample::Pin::getState()
+bool JBPin::getState()
 {
   return state;
 }
-bool UberLibraryExample::Pin::getMode()
+bool JBPin::getMode()
 {
   return mode;
 }
-bool UberLibraryExample::Pin::isHigh()
+bool JBPin::isHigh()
 {
   return state == HIGH ? true : false;
 }
 
 // Setters
-void UberLibraryExample::Pin::setHigh()
+void JBPin::setHigh()
 {
   state = HIGH;
   setActualPinState();
 }
-void UberLibraryExample::Pin::setLow()
+void JBPin::setLow()
 {
   state = LOW;
   setActualPinState();
 }
-void UberLibraryExample::Pin::setActualPinState()
+void JBPin::setActualPinState()
 {
   digitalWrite(number, state);
 }
