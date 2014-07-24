@@ -18,7 +18,7 @@
       int mode;
       bool state;
     public:
-      Pin(int _number);
+      JBPin(int _number);
       void beginInPinMode(PinMode _pinMode);
       void modulateAtFrequency(int _ms);
       int getNumber();
